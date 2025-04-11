@@ -1,14 +1,14 @@
 ### how to
-- add alias
+- Add alias
   ``` console
   dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
   ```
-- init bare Repo
+- Init bare Repo
   ``` console
   git clone --bare git@github.com:aous-afk/dotfiles.git $HOME/.dotfiles
   ```
-- for the nvim config
-  if ther is old files make sure to back them up or delete them
+- For the nvim config
+  if there were old files make sure to back them up or delete them
   ``` console
   dotfiles submodule init
   dotfiles submodule update
@@ -20,3 +20,14 @@
   :Lazy
   ```
   and then update
+
+  ### Tmux
+  - Clone tpm
+    ```console
+    git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+    ```
+  - Enter tmux and Install the plugins
+    the prefix is ctr + a
+    ```
+    `prefix` + <kbd>I</kbd>
+    ```
