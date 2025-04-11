@@ -14,19 +14,19 @@
   dotfiles submodule update
   ```
 
-  ### Neo-vim
+### Neo-vim
   make sure to update the nvim with Lazy
   ```nvim
   :Lazy
   ```
   and then update
 
-  ### Tmux
-  - Clone tpm
+### Tmux
+- Clone tpm
     ```console
     git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
     ```
-  - Enter tmux and Install the plugins
+- Enter tmux and Install the plugins
     the prefix is ctr + a
     ```
     `prefix` + <kbd>I</kbd>
