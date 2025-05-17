@@ -1,0 +1,44 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: "CommitMono Nerd Font" ;
+    font-size: 12px;
+    /*font-weight: bold;*/
+    min-height: 0;
+}
+
+window#waybar {
+    background-color: transparent;
+  /*  background: #000000;*/
+  /*  color: #e5e9f0;*/
+}
+
+#workspaces button {
+    padding: 0 5px;
+    border-radius: 25px;
+    background: #4c566a;
+    color: #ffffff;
+    /* border-bottom: 3px solid transparent;*/
+}
+
+#workspaces button.focused {
+    background: #3b3bd1;
+    /* border-bottom: 3px solid #e5e9f0;*/
+}
+
+#workspaces button.urgent {
+    background-color: #bf616a;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ffffff;
+}
+
+#clock, #battery, #network{
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 10px 0px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+}

@@ -1,0 +1,107 @@
+*
+# Nvim Config
+!.config/nvim
+!.config/nvim/
+!.config/nvim/*
+!.config/nvim/*/*
+!.config/nvim/*/*/*
+!.config/nvim/*/*/*/*
+
+# Bash stuff (profile just sources bashrc, since it's the only thing sourced
+# when a shell is a login shell).
+!.bash*
+.bash-history
+.*.swp
+.bash_history
+.bash_local
+.bash_logout
+
+# Zsh
+!.zshrc
+!.zsh
+!.zsh/*
+!.zsh/contrib
+!.zsh/contrib/*
+# Do ignore the data directory (my construct, it's where completion cache,
+# history etc live)
+.zsh/data
+.zsh/data/*
+# Do ignore local/sensitive settings
+.zsh/*local
+# Swapfiles (sigh)
+.zsh/*.swp
+
+# Git aliases, identification info
+!.gitconfig
+# The gitignore of this repository itself (!)
+!.gitignore
+# My global Git excludes file (acts as a global .gitignore)
+!.gitexcludes
+!.tmux.conf
+!.tmuxp
+!.tmuxp/*.yml
+
+# Ag
+!.agrc
+
+# Teamocil
+!.teamocil
+!.teamocil/*
+
+# Synergy
+!.synergy.conf
+
+# Leiningen (Clojure)
+!.lein
+!.lein/profiles.clj
+
+# Hammerspoon (Lua-based OS X automation tool)
+!.hammerspoon
+!.hammerspoon/*
+.hammerspoon/.*.swp
+
+# Linux workstation stuff
+!.config
+!.config/bat
+!.config/bat/*
+!.config/bat/themes
+!.config/bat/themes/*
+!.config/direnv
+!.config/direnv/direnv.toml
+!.config/xfce4
+!.config/xfce4/terminal
+!.config/xfce4/terminal/terminalrc
+!.config/systemd/
+!.config/systemd/user
+!.config/systemd/user/*
+!.config/systemd/user/*/*
+# Keep ignoring this, it comes from the OS.
+.config/systemd/user/gpg-agent.service
+# And don't see swaps as usual (sigh)
+.config/systemd/user/.*.swp
+
+# Random arbitrary not-really-a-config file,
+# for use with hexdump
+!.config/hexdump.format
+
+# Invoke customization (eg for nixos run.shell loc)
+!.invoke.yml
+
+# GPG settings (does NOT include keychain etc!)
+!.gnupg
+!.gnupg/*.conf
+
+# Rust!
+!.cargo
+!.cargo/config.toml
+
+# Lazygit
+!.config/lazygit/
+!.config/lazygit/config.yml
+
+# 1Password CLI hooks
+#!.config/1Password
+#!.config/1Password/*
+#!.config/1Password/ssh/
+#!.config/1Password/ssh/*
+!README.md
