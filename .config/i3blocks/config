@@ -1,0 +1,59 @@
+# i3blocks config file
+#
+# Please see man i3blocks for a complete reference!
+# The man page is also hosted at http://vivien.github.io/i3blocks
+#
+# List of valid properties:
+#
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=$SCRIPT_DIR/$BLOCK_NAME
+separator_block_width=15
+markup=pango
+
+[time]
+# color=#ffcc00
+# background="red"
+command=printf " <span background=\""red"\" > CAL </span><span background=\""#EE37B8"\"> $(date '+%Y-%m-%d %H:%M:%S') </span> "
+min_width=1366
+align=center
+interval=1
+
+
+[volume-pipewire]
+command=$SCRIPT_DIR/volume-pipewire/volume-pipewire
+interval=once
+signal=1
+
+# Battery indicator
+#
+# The battery instance defaults to 0.
+[battery]
+command=$SCRIPT_DIR/battery/battery
+label=BAT
+label=⚡
+interval=30
+
+[key_layout]
+command=$SCRIPT_DIR/key_layout/key_layout
+label=Layout
+interval=30
+
+[click]
+full_text=⏻ 
+command=shutdown now
+color=#F79494
+
