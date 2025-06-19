@@ -41,6 +41,11 @@
 !.tmuxp
 !.tmuxp/*.yml
 
+# Sway
+!.config/sway
+!.config/sway/*
+.config/sway/monitors.conf
+
 # Ag
 !.agrc
 

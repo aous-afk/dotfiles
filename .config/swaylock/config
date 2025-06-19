@@ -1,4 +1,6 @@
+image=~/Downloads/bg_moon.jpg
 font=FantasqueSansM Nerd Font Propo
+font-color=00000
 font-size=40
 effect-blur=3x5
 scaling=fill

@@ -1,5 +1,4 @@
 * {
-    border: none;
     border-radius: 0;
     font-family: "CommitMono Nerd Font" ;
     font-size: 12px;
@@ -9,7 +8,7 @@
 
 window#waybar {
     background-color: transparent;
-  /*  background: #000000;*/
+    background: #282929;
   /*  color: #e5e9f0;*/
 }
 
@@ -35,10 +34,77 @@ window#waybar {
     border-bottom: 3px solid #ffffff;
 }
 
-#clock, #battery, #network{
+#tray {
+    margin: 0;
+    padding: 0;
+}
+/*
+#tray * {
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 3px 0px 3px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+*/
+#clock, #battery, #network, #language, #pulseaudio, #custom-power, #custom-tray-wrap{
     background-color: #3b3bd1;
     color: #e5e9f0;
     padding: 0px 10px 0px 10px;
     border-radius: 25px;
     font-weight: bold;
 }
+
+#custom-reboot:hover, #custom-quit:hover, #custom-lock:hover, #custom-sleep:hover{
+    background-color: #3b3bd1;
+    border-radius: 25px;
+}
+
+#custom-hardware-wrap{
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 10px 0px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+#cpu {
+
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 10px 0px 3px;
+    border-radius: 0px 25px 25px 0px;
+    font-weight: bold;
+}
+
+#temperature.cpu {
+
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 3px 0px 10px;
+    border-radius: 25px 0px 0px 25px;
+    font-weight: bold;
+}
+
+#memory, #temperature.gpu {
+    background-color: #3b3bd1;
+    color: #e5e9f0;
+    padding: 0px 10px 0px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+/*
+#custom-hardware-wrap {
+     box-shadow: none;
+     background: #202131;
+     text-shadow: none;
+     padding: 0px;
+     border-radius: 5px;
+     margin-top: 3px;
+     margin-bottom: 3px;
+     margin-right: 6px;
+     margin-left: 6px;
+     padding-right: 4px;
+     padding-left: 4px;
+     color: #98C379;
+}
+*/
