@@ -1,0 +1,75 @@
+
+    "custom/expand": {
+	"tooltip": false,
+	"format": "\uf0d9"
+    },
+
+    "tray": {
+	"spacing": 8
+    },
+
+    "group/minimized": {
+	"orientation": "horizontal",
+	"modules": ["custom/expand", "tray"],
+	"drawer": {
+	    "transition-duration": 500,
+	    "children-class": "minimized"
+	}
+    },
+    "group/tray":{
+	"oreintation": "horizontal",
+	"modules":[
+	    "tray"
+	]
+    },
+    "group/hardware": {
+	"oreintation": "horizontal",
+	"drawer": {
+	    "transition-duration": 500,
+	    "transition-left-to-right": true
+	},
+	"modules": [
+	    "custom/hardware-wrap",
+	    "cpu",
+	    "memory",
+	    "temperature"
+	]
+    },
+    "custom/hardware-wrap": {
+	"format": "Hardware",
+	"tooltip-format": "Hardware group"
+    },
+    "group/group-power": {
+	"orientation": "vertical",
+	"drawer": {
+	    "transition-duration": 500,
+	    "children-class": "not-power",
+	    "transition-left-to-right": true,
+	},
+	"modules": [
+	    "custom/power", // First element is the "group leader" and won't ever be hidden
+	    "custom/quit",
+	    "custom/lock",
+	    "custom/reboot",
+	]
+    },
+    "custom/quit": {
+	"format": "󰗼",
+	"tooltip": false,
+	"on-click": "hyprctl dispatch exit"
+    },
+    "custom/lock": {
+	"format": "󰍁",
+	"tooltip": false,
+	"on-click": "swaylock"
+    },
+    "custom/reboot": {
+	"format": "󰜉",
+	"tooltip": false,
+	"on-click": "reboot"
+    },
+    "custom/power": {
+	"format": "",
+	"tooltip": false,
+	"on-click": "shutdown now"
+    }

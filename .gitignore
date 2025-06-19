@@ -46,6 +46,10 @@
 !.config/sway/*
 .config/sway/monitors.conf
 
+# Waybar
+!.config/waybar
+!.config/waybar/*
+
 # Ag
 !.agrc
 
