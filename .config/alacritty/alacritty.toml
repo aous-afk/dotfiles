@@ -1,0 +1,27 @@
+[env]
+TERM = "xterm-256color"
+
+# [font]
+# size = 8.0
+# 
+# [font.bold]
+# # family = "MesloLGS Nerd Font Mono"
+# family = "CommitMono Nerd Font"
+[window]
+
+# opacity = 0.9
+
+padding.x = 10
+padding.y = 10
+
+decorations = "Full"
+decorations_theme_variant = "Light" # "Dark"
+
+[font]
+
+normal.family = "CommitMono Nerd Font"
+bold.family = "CommitMono Nerd Font"
+italic.family = "CommitMono Nerd Font"
+bold_italic.family = "CommitMono Nerd Font"
+
+size = 12.0

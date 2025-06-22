@@ -50,6 +50,8 @@
 !.config/waybar
 !.config/waybar/*
 
+!.config/alacritty/*
+
 # Ag
 !.agrc
 
