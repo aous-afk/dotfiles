@@ -7,15 +7,6 @@
 !.config/nvim/*/*/*
 !.config/nvim/*/*/*/*
 
-# Bash stuff (profile just sources bashrc, since it's the only thing sourced
-# when a shell is a login shell).
-!.bash*
-.bash-history
-.*.swp
-.bash_history
-.bash_local
-.bash_logout
-
 # Zsh
 !.zshrc
 !.zsh
@@ -31,7 +22,6 @@
 # Swapfiles (sigh)
 .zsh/*.swp
 
-# Git aliases, identification info
 !.gitconfig
 # The gitignore of this repository itself (!)
 !.gitignore
@@ -82,14 +72,14 @@
 !.config/xfce4
 !.config/xfce4/terminal
 !.config/xfce4/terminal/terminalrc
-!.config/systemd/
-!.config/systemd/user
-!.config/systemd/user/*
-!.config/systemd/user/*/*
-# Keep ignoring this, it comes from the OS.
-.config/systemd/user/gpg-agent.service
-# And don't see swaps as usual (sigh)
-.config/systemd/user/.*.swp
+# !.config/systemd/
+# !.config/systemd/user
+# !.config/systemd/user/*
+# !.config/systemd/user/*/*
+# # Keep ignoring this, it comes from the OS.
+# .config/systemd/user/gpg-agent.service
+# # And don't see swaps as usual (sigh)
+# .config/systemd/user/.*.swp
 
 # Random arbitrary not-really-a-config file,
 # for use with hexdump
@@ -99,8 +89,8 @@
 !.invoke.yml
 
 # GPG settings (does NOT include keychain etc!)
-!.gnupg
-!.gnupg/*.conf
+# !.gnupg
+# !.gnupg/*.conf
 
 # Rust!
 !.cargo
