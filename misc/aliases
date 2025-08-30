@@ -1,0 +1,11 @@
+alias lss="ls -a"
+alias ex="exit"
+alias nm="nvim ."
+# dotfiles alias
+alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias dfilesgit='lazygit --git-dir=$HOME/.dotfiles --work-tree=$HOME'
+# System
+alias update='sudo pacman -Syu'
+
+## git
+alias lg='lazygit'

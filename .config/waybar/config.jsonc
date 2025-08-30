@@ -38,12 +38,8 @@
 	    "on-scroll-down": "shift_down"
 	}
     },
-
-    "sway/language": {
-	"format": "{short} {variant}",
-    },
-
     "network": {
+	"interface": "eno1",
 	"format": "{ifname}",
 	"format-wifi": "{essid} ({signalStrength}%) ",
 	"format-ethernet": "󰌗 ",
@@ -54,6 +50,9 @@
 	"tooltip-format-disconnected": "Disconnected",
 	"on-click": "nm-connection-editor",
 	"max-length": 50
+    },
+    "sway/language": {
+	"format": "{short} {variant}",
     },
 
     "pulseaudio": {
@@ -89,7 +88,7 @@
     "custom/quit": {
 	"format": "<span font='10'> 󰗼 </span>",
 	"tooltip": false,
-	"on-click": "sway exit"
+	"on-click": "swaymsg exit"
     },
     "custom/lock": {
 	"format": "<span font='10'> 󰍁 </span>",

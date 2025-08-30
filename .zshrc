@@ -1,7 +1,7 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 ZSH_THEME="agnoster"
-plugins=(
+plugins+=(
     fzf
     git
     history-substring-search
@@ -11,8 +11,6 @@ plugins=(
     zsh-z
     zsh-vi-mode
 )
-source $ZSH/oh-my-zsh.sh
-alias lss="ls -a"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -26,10 +24,23 @@ export PATH=$HOME/.dotnet/tools:$PATH
 # Load Angular CLI autocompletion.
 source <(ng completion script)
 
-alias ex="exit"
-alias nm="nvim ."
-# dotfiles alias
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 GDK_BACKEND=wayland
 
+# zsh-vi-mode settings
+export EDITOR='vim -u NONE'
+bindkey -M vicmd "^V" edit-command-line
+
+# colored man pages
+export LESS_TERMCAP_mb=$'\e[1;32m'
+export LESS_TERMCAP_md=$'\e[1;32m'
+export LESS_TERMCAP_me=$'\e[0m'
+export LESS_TERMCAP_se=$'\e[0m'
+export LESS_TERMCAP_so=$'\e[01;33m'
+export LESS_TERMCAP_ue=$'\e[0m'
+export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+source $ZSH/oh-my-zsh.sh
 eval "$(keychain --eval ~/.ssh/pcarch)"
+bindkey -v
+# load misc
+source ~/misc/aliases
