@@ -51,7 +51,7 @@ bindsym Mod4+Shift+9 move container to workspace number $ws9
 bindsym Mod4+Shift+0 move container to workspace number $ws10
 
 output $fm  mode 2560x1440@165Hz  pos 0 0 bg $wallpaper fill 
-output $sm  mode 1920x1080  pos 0 1920 transform 90 
+output $sm  mode 1920x1080  pos 0 1920  bg $wallpaper fill
 focus output $fm
 
 # CommitMono Nerd Font:
@@ -71,8 +71,9 @@ bindsym $mod+Return exec $term
 # kill focused window
 bindsym $mod+Shift+q kill
 
-bindsym $mod+d exec rofi -show drun
+# bindsym $mod+d exec rofi -show drun
 bindsym $mod+Tab exec rofi -show window
+bindsym $mod+d exec j4-dmenu-desktop --dmenu='bemenu -i --nb "#3f3f3f" --nf "#dcdccc" --fn "pango:CommitMono Nerd Font 10"' --term='termite'
 
 # change focus
 bindsym $mod+h focus left
@@ -120,6 +121,7 @@ for_window [class="ksysguard"] floating enable
 for_window [class="ksysguard"] sticky enable
 for_window [class="Wine"] floating enable
 for_window [app_id="lutris"] floating enable
+for_window [title="Picture-in-Picture"] floating enable
 # change focus between tiling / floating windows
 # bindsym $mod+space focus mode_toggle
 
@@ -189,36 +191,40 @@ input * {
 
 ## idle config
 exec swayidle -w \
-		 timeout 300 'swaylock -f -F -e -c 000000' \
-		 timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-		 before-sleep 'playerctl pause; swaylock -f -F -e -c 000000'
+	 timeout 300 'swaylock -f -F -e -c 000000' \
+	 timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
+	 before-sleep 'playerctl pause; swaylock -f -F -e -c 000000'
 
 # Color config
 # class                 border  backgr. text    indicator child_border
-		 client.focused          #3b3bd1 #3b3bd1 #ffffff #2e9ef4   #3b3bd1
-		 client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
-		 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
-		 client.urgent           #2f343a #900000 #ffffff #900000   #900000
-		 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+client.focused          #3b3bd1 #3b3bd1 #ffffff #2e9ef4   #3b3bd1
+client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.unfocused        #333333 #222222 #888888 #292d2e   #222222
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
-		 client.background       #ad1a1a
+client.background       #ad1a1a
 
-		 bar {
+bar {
 # status_command SCRIPT_DIR=~/.config/i3blocks/scripts i3blocks
-			 swaybar_command waybar 
-				 position top
-				 colors {
-					 background #ffffff00
-						 statusline #ffffff
-						 separator #000000 
+    swaybar_command waybar 
+	position top
+	mode invisible
+	colors {
+	    background #00000000
+		statusline #ffffff
+		separator #000000 
 #				    border  bg	    text
-						 focused_workspace  #992323 #992323 #ffffff
-						 active_workspace   #333333 #5f676a #ffffff
-						 inactive_workspace #333333 #222222 #888888
-						 urgent_workspace   #2f573a #900000 #ffffff
-						 binding_mode       #2f343a #900000 #ffffff
-				 }
-		 }
+		focused_workspace  #992323 #992323 #ffffff
+		active_workspace   #333333 #5f676a #ffffff
+		inactive_workspace #333333 #222222 #888888
+		urgent_workspace   #2f573a #900000 #ffffff
+		binding_mode       #2f343a #900000 #ffffff
+	}
+}
+gaps inner 4
+gaps outer 4
+# exec_always waybar
 default_border pixel
 default_floating_border pixel
 hide_edge_borders smart

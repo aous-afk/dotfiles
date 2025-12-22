@@ -1,5 +1,5 @@
 {
-    "layer": "bottom", // Waybar at top layer
+    "layer": "top", // Waybar at top layer
     "spacing": 10,
     "modules-left": ["sway/workspaces"],
     "modules-center": ["clock"],

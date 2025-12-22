@@ -40,7 +40,9 @@ export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
 
 source $ZSH/oh-my-zsh.sh
-eval "$(keychain --eval ~/.ssh/pcarch)"
+eval "$(keychain --eval --quiet ~/.ssh/pcarch)"
 bindkey -v
 # load misc
 source ~/misc/aliases
+
+source /home/aous/.config/broot/launcher/bash/br
