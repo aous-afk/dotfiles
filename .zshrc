@@ -20,6 +20,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # export csharp-ls, downloaded with dotnet tool
 export PATH=$HOME/.dotnet/tools:$PATH
+# export LANG=en_GB.UTF-8
 
 # Load Angular CLI autocompletion.
 source <(ng completion script)
@@ -27,7 +28,8 @@ source <(ng completion script)
 GDK_BACKEND=wayland
 
 # zsh-vi-mode settings
-export EDITOR='vim -u NONE'
+# export EDITOR='vim -u NONE'
+export EDITOR='/usr/bin/nvim'
 bindkey -M vicmd "^V" edit-command-line
 
 # colored man pages
@@ -38,6 +40,8 @@ export LESS_TERMCAP_se=$'\e[0m'
 export LESS_TERMCAP_so=$'\e[01;33m'
 export LESS_TERMCAP_ue=$'\e[0m'
 export LESS_TERMCAP_us=$'\e[1;4;31m'
+
+export BARTIB_FILE="$HOME/activities.bartib"
 
 source $ZSH/oh-my-zsh.sh
 eval "$(keychain --eval --quiet ~/.ssh/pcarch)"
