@@ -1,4 +1,55 @@
+gui:
+  sidePanelWidth: 0.2
+  expandFocusedSidePanel: true
+  showFileTree: true
+  nerdFontsVersion: "3"
+  mouseEvents: true
+  showBranchCommitHash: true
+  splitDiff: auto
 git:
+  # pagers:
+  #   - colorArg: always
+  #     pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
   pagers:
     - colorArg: always
-      pager: delta --dark --paging=never --line-numbers --hyperlinks --hyperlinks-file-link-format="lazygit-edit://{path}:{line}"
+      useConfig: false
+      pager: delta --dark --paging=never --line-numbers
+
+    - colorArg: always
+      pager: diff-so-fancy
+  commit:
+    signOff: false
+    autoWrapCommitMessage: true
+    autoWrapWidth: 72
+  merging:
+    manualCommit: false
+  autoFetch: true
+  autoRefresh: true
+  fetchAll: true
+  branchLogCmd: "git log --graph --color=always --abbrev-commit --decorate --date=relative --oneline {{branchName}} --"
+  diffContextSize: 10
+os:
+  editPreset: nvim
+  shellFunctionsFile: ~/.zshrc # or ~/.bashrc — lets lazygit's : prompt use your aliases
+keybinding:
+  universal:
+    quit: q
+    return: <esc>
+  files:
+    commitChanges: c
+    commitChangesWithEditor: C
+customCommands:
+  - key: "<c-r>"
+    command: "git rebase --interactive --autosquash {{.SelectedLocalBranch.Name}}"
+    context: "localBranches"
+    description: "Autosquash rebase onto branch"
+    loadingText: "Rebasing..."
+  - key: "P"
+    command: "git push --force-with-lease"
+    context: "localBranches"
+    description: "Force push safely"
+
+  - key: "S"
+    command: "git stash push --staged -m '{{input \"Stash name: \"}}'"
+    context: "files"
+    description: "Stash staged changes only"
